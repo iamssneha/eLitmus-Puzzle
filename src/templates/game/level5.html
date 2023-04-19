@@ -1,0 +1,61 @@
+{% extends "_base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blue Box Game</title>
+    <meta charset="UTF-8">
+    <style>
+
+        #bluebox {
+            /* width: p; */
+            height: 300px;
+            background-color: blue;
+        }
+
+         #start-button {
+            margin-left: 20%;
+        }
+        /* #start-button,
+        #end-button {
+            position: absolute;
+            top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+       
+
+        #end-button {
+            right: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Level 5 - Crossing the River!</h1>
+    <p>
+        You cracked the code again. Trusting the old man and the clues you found, you take the risk of reaching the location.
+        As you follow the map directions you reach a river. At the other end lies the treasure. But there is a twist. The river is dangerous and poisonous
+        <br>
+        How will you cross the river?
+    </p>
+    <hr>
+    <p>Press start to play</p>
+
+    <button id="start-button">Start</button>
+    <button id="raft-button">Take the Raft</button>
+    
+    <div id="bluebox"></div>
+   
+    <button id="end-button">Get Treasure</button>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/blue_river.js') }}"></script>
+</body>
+
+</html>
+
+{% endblock %}

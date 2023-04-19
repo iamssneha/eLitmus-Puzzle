@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% block content %}
+    <h1 class="text-center">Level 2 - Cryptic Code</h1>
+    <p>
+        You successfully open the gate and entered the place. It is a long hallway with a lots of doors. 
+        You try to open a door but its locked. You start exploring the hallway. 
+        <br>
+        You observe that a door is unlocked and inside lies a computer. As you sit on the chair, you are presented with the webpage as below.
+    </p>
+    <p>Figure out the code to get a step closer to the treasure</p>
+    <hr>
+    <h3 class="text-center">Can you Find the Code??</h3>
+    <form id="guess-form">
+        <label for="guess">Enter the code:</label>
+        <input type="text" name="guess" id="guess">
+        <button type="submit">Check</button>
+    </form>
+    <button id="hint">Hint</button>
+    <div id="result"></div>
+    <!-- You have looked this far for the code
+    Congrats You Found it!!!
+    The code is below {{code_word}} -->
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/find_code.js') }}"></script>
+
+{% endblock %}

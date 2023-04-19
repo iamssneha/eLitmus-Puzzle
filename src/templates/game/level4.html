@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+{% block content %}
+<h1 class="text-center">Level 4 -Unlocking the Gate Again!</h1>
+<p>
+    You completed the puzzle and the computer presented you with the exact map location of the treasure. But before you could leave to find the treaure, there is a loud slam. The gate has closed itself. And the computer shuts down. 
+    <br>
+    You reach near the door and find a similar lock to the one you found at entry. You must solve this to move forward.
+
+    <br>
+    <br>
+    Rules :
+    <br>1. For red arrow, press the arrow key same as arrow direction
+    <br>2. For blue arrow, press the arrow key same as direction arrow moves
+    <br>3. A wrong combination and you are stuck forever inside
+</p>
+<hr>
+<p>Solve the door code to proceed to the next level</p>
+<hr>
+<div id="game">
+    <div id="box">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+    </div>
+</div>
+<button type="button" id="btn">Continue Game</button>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/arrow_direction.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "_base.html" %}
+{% block content %}
+
+<h1 class="text-center">Welcome {{current_user.email}}! You are a admin</h1>
+        <a href="{{ url_for('core.admin_stats') }}"><button type="button" class="btn btn-primary center me-2">View Stats</button></a>
+
+{% endblock %}

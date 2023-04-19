@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+{% block content %}
+
+<h1 class="text-center">Stats for all Users</h1>
+
+
+<table>
+    <TR>
+        <TH>User Email</TH>
+        <TH>Level 1 Tries</TH>
+        <TH>Level 2 Tries</TH>
+        <TH>Level 3 Tries</TH>
+        <TH>Level 4 Tries</TH>
+        <TH>Level 5 Tries</TH>
+        <TH>Max Current Level</TH>
+        <TH>Times Played</TH>
+        <TH>Is Admin</TH>
+
+    </TR>
+    {% for item in items %}
+    <TR border="2">
+        <TD class="c1">{{item.email}}</TD>
+        <TD class="c2">{{item.level1_tries}}</TD>
+        <TD class="c2">{{item.level2_tries}}</TD>
+        <TD class="c2">{{item.level3_tries}}</TD>
+        <TD class="c2">{{item.level4_tries}}</TD>
+        <TD class="c2">{{item.level5_tries}}</TD>
+        <TD class="c3">{{item.maxCurrentLevel}}</TD>
+        <TD class="c3">{{item.num_tries}}</TD>
+        <TD class="c4"><SPAN>{{item.is_admin}}</SPAN></TD>
+    </TR>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "_base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Level 1 - Crack the Safe</title>
+</head>
+
+<body>
+    <h1 class="text-center">Level 1- Crack the Lock</h1>
+    <p>
+    You decide to follow John's advice and go to the loaction he mentioned. As you reach the place you find yourself in front of a large gate. There is a lock on the gate that asks you for the entry pass key
+    <br>
+        You decide to open up the box. Inside you find two items
+        <br> 1. A picture of key with some text below it
+        <br> 2. A envelope with <strong>Open for Answer</strong> written on it
+        <br><br>
+        You open up the envelope and find <strong>Look Below the Key</strong> written on a paper inside the envelope
+    </p>
+    <p>
+        You are now wondering what will be the key to this lock. Determine the code to unlock the gate
+    </p>
+    <img src="{{ url_for('static', filename='images/key.jpg') }}"/>
+    <form id="guess-form">
+        <label for="guess">Determine the code to crack the safe:</label>
+        <input type="text" name="guess" id="guess">
+        <button type="submit">Check</button>
+    </form>
+    <button id="hint1">Hint 1</button>
+    <button id="hint2">Hint 2</button>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/decode_key.js') }}"></script>
+</body>
+
+</html>
+{% endblock %}

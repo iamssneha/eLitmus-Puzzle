@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% block content %}
+    <h1 class="text-center">Level 3 -The Old Man's Color Puzzle</h1>
+    <p>
+        You found the code and entered it in the system. The systems does a variety of automated tasks and boots up. It then opens up a puzzle for you. 
+    </p>
+    <p>Solve the puzzle to proceed to the next level</p>
+    <hr>
+    <h3 class="text-center">Guess the Color</h3>
+    <p class="text-center">
+        What color is the text? <br>
+        10 attempts. Score 6 or the map is lost forever
+    </p>
+    <button id="start-button">Start</button>
+    <h2 id="word-display" class="hidden"></h2>
+    <h2 id="color-display" class="hidden"></h2>
+    <form id="response-form">
+        <input type="text" id="response-input" disabled>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message-display"></p>
+    <br>
+    <button id="hint">Hint </button>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/guess_color.js') }}"></script>
+{% endblock %}
